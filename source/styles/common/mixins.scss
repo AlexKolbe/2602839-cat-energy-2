@@ -7,6 +7,6 @@
     font-weight: $font-weight;
     font-style: $font-style;
     font-display: swap;
-    src: $font-src;
+    src: $font-woff2-src, $font-woff-src;
   }
 }
