@@ -130,15 +130,15 @@
   background-size: 27px 31px;
 }
 
-.how-it-work__item::before {
-  content: "";
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $bg-color-accent;
-  aspect-ratio: 1;
-  width: 60px;
-}
+// .how-it-work__item::before {
+//   content: "";
+//   display: block;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-color: $bg-color-accent;
+//   aspect-ratio: 1;
+//   width: 60px;
+// }
 
 .how-it-work__description {
   margin: 0;
