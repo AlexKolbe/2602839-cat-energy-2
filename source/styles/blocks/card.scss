@@ -104,6 +104,10 @@
 .card__link {
   text-decoration: none;
   color: $font-color-primary-alternate-accent;
+
+  @include mobile {
+    grid-row: span 2;
+  }
 }
 
 .card__button {
@@ -113,5 +117,48 @@
 
   @include tablet {
     margin-top: auto;
+  }
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+
+  @include mobile {
+    align-self: center;
+  }
+
+  &--small {
+    @include mobile {
+      margin-bottom: 8px;
+      align-self: center;
+      max-height: 100%;
+    }
+
+    @include tablet {
+      margin-top: 6px;
+      height: 172px;
+    }
+  }
+
+  &--large {
+    @include mobile {
+      align-self: flex-end;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    @include tablet {
+      margin-top: -12px;
+      height: 206px;
+    }
+
+    @include desktop {
+      margin-top: -6px;
+      height: 197px;
+    }
   }
 }

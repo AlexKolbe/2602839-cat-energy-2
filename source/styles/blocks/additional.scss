@@ -1,36 +1,217 @@
 //
 
+.additional {
+  overflow-x: hidden;
+}
+
+.additional__wrapper {
+  position: relative;
+
+  @include mobile {
+    margin-top: 17px;
+    margin-bottom: 35px;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+    margin-bottom: 76px;
+  }
+
+  @include desktop {
+    margin-top: 73px;
+    margin-bottom: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+
 .additional__title {
   @include font-info($primary-font, 24px, 37px);
   text-transform: uppercase;
+  display: block;
+  background-color: $bg-color-primary;
+  margin: 0;
+  padding: 0 23px 0 0;
+  width: fit-content;
+  grid-column: 1/-1;
+
+  @include mobile {
+    margin-bottom: 29px;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+    padding: 0 40px;
+  }
+
+  @include desktop {
+    margin-left: -40px;
+    margin-bottom: 80px;
+  }
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: $bg-color-accent;
+    z-index: -1;
+    top: 22px;
+
+    @include tablet {
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .additional__list {
   @include list-base;
+  display: grid;
+
+  @include mobile {
+    margin-bottom: 35px;
+  }
+
+  @include tablet {
+    margin-bottom: 68px;
+  }
+
+  @include desktop {
+    grid-column: 1/4;
+  }
+}
+
+.additional__item {
+  display: grid;
+
+  @include mobile {
+    padding-top: 14px;
+    padding-bottom: 19px;
+    row-gap: 13px;
+    border-top: 1px solid $input-color-border;
+  }
+
+  @include tablet {
+    padding: 24px 37px 29px;
+    border: 1px solid $input-color-border;
+    border-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 21px 60px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 80px;
+    align-items: center;
+    border: 0;
+    border-top: 1px solid $input-color-border;
+    padding: 15px 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $input-color-border;
+  }
 }
 
 .additional__item-title {
   @include font-info($primary-font, 16px, 16px);
   text-transform: uppercase;
   color: $font-color-primary-alternate-accent;
+  margin: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  @include desktop {
+    margin-bottom: 3px;
+  }
 }
 
 .additional__characteristics {
   @include font-info($second-font, 14px, 20px);
   color: $font-color-accent;
+  display: grid;
+  margin: 0;
+  column-gap: 10px;
+
+  @include mobile {
+    grid-template-columns: auto min-content;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    grid-template-columns: auto 84px;
+    margin-top: 4px;
+  }
+
+  @include desktop {
+    grid-template-columns: auto 100px;
+    margin-right: -70px;
+    margin-top: 6px;
+  }
+}
+
+.additional__button {
+  @include tablet {
+    grid-column: 1/-1;
+  }
+
+  @include desktop {
+    grid-column: auto;
+  }
 }
 
 .additional__gift {
-  margin-top: 20px;
-  min-height: 290px;
-  background-image:
-    linear-gradient($bg-color-picture),
-    image-set("../../images/catalog-bg-gift-mobile@1x.png" 1x type("image/png"), "../../images/catalog-bg-gift-mobile@2x.png" 2x type("image/png")),
-    linear-gradient(to right, $bg-color-picture-alternate);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto, 280px, auto;
-  position: relative;
+  @include mobile {
+    margin-top: 20px;
+    min-height: 290px;
+    background-image:
+      linear-gradient($bg-color-picture),
+      image-set("../../images/catalog-bg-gift-mobile@1x.png" 1x type("image/png"), "../../images/catalog-bg-gift-mobile@2x.png" 2x type("image/png")),
+      linear-gradient(to right, $bg-color-picture-alternate);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, 280px, auto;
+    position: relative;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+    min-height: 200px;
+    background-image:
+      linear-gradient($bg-color-picture),
+      image-set("../../images/catalog-bg-gift-tablet@1x.png" 1x type("image/png"), "../../images/catalog-bg-gift-tablet@2x.png" 2x type("image/png")),
+      linear-gradient(to right, $bg-color-picture-alternate);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, 707px, auto;
+    position: relative;
+  }
+
+  @include desktop {
+    margin-top: 20px;
+    min-height: 200px;
+    background-image:
+      linear-gradient($bg-color-picture),
+      image-set("../../images/catalog-bg-gift-mobile@1x.png" 1x type("image/png"), "../../images/catalog-bg-gift-mobile@2x.png" 2x type("image/png")),
+      linear-gradient(to right, $bg-color-picture-alternate);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto, 707px, auto;
+    position: relative;
+  }
 }
 
 

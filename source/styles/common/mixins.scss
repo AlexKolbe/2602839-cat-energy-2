@@ -64,7 +64,7 @@
   @include button-base;
   padding: 10px;
 
-  @include tablet() {
+  @include tablet {
     font-size: 16px;
     line-height: 20px;
     padding: 14px;
