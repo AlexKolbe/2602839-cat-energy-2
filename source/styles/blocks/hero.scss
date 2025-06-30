@@ -7,7 +7,14 @@
   text-transform: uppercase;
   text-align: center;
   color: $font-color-primary;
-  margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .hero__wrapper {
@@ -19,7 +26,7 @@
     padding: 0 15px;
 
     background-image:
-      linear-gradient($bg-color-picture 61%, $bg-color-primary 39%),
+      linear-gradient($bg-color-picture 62%, $bg-color-primary 39%),
       image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
       linear-gradient(to right, $bg-color-picture-alternate);
 
@@ -39,6 +46,7 @@
     text-align: center;
     text-transform: none;
     margin-bottom: 25px;
+    margin-top: 25px;
   }
 
   @include tablet {
@@ -47,7 +55,7 @@
     line-height: 60px;
     max-width: 420px;
     margin-top: 65px;
-    margin-left: 90px;
+    margin-left: 89px;
     margin-bottom: 40px;
     text-transform: none;
     text-align: left;
@@ -89,8 +97,7 @@
   }
 
   @include tablet {
-    margin-top: 83px;
-    // margin-left: 90px;
+    margin-top: -30px;
   }
 
   @include desktop {
@@ -107,6 +114,7 @@
 
   @include mobile {
     order: 3;
+    margin: 5px;
   }
 
   @include tablet {
@@ -115,5 +123,7 @@
     z-index: 1;
     position: absolute;
     left: 120px;
+    width: 244px;
+    top: 229px;
   }
 }

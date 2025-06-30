@@ -11,6 +11,7 @@
   @include tablet {
     font-size: 18px;
     line-height: 24px;
+    margin-right: -13px;
   }
 
   @include desktop {
@@ -33,7 +34,7 @@
     position: absolute;
     background-color: $bg-color-accent;
     height: 2px;
-    bottom: 5px;
+    bottom: 3px;
     left: 0;
     right: 0;
   }

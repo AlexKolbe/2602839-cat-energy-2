@@ -33,6 +33,10 @@
   @include mobile {
     margin: 20px auto 40px;
   }
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .how-it-work__list {
@@ -141,6 +145,7 @@
 // }
 
 .how-it-work__description {
-  margin: 0;
   align-self: center;
+  margin: 0;
+  padding: 0;
 }

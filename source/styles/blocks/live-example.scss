@@ -25,7 +25,7 @@
   }
 
   @include tablet {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
     gap: 20px 30px;
     padding-top: 43px;
     padding-bottom: 101px;
@@ -69,6 +69,8 @@
   @include tablet {
     grid-column: 1/-1;
     margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @include desktop {
@@ -171,10 +173,10 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 11px;
-    display: flex;
-    text-align: right;
-    flex-direction: column;
-    gap: 9px;
+    // display: flex;
+    // text-align: right;
+    // flex-direction: column;
+    // gap: 9px;
   }
 
   @include desktop {
@@ -186,23 +188,14 @@
 }
 
 .live-example__slider {
+  position: relative;
+  margin: 0 auto;
+
   @include mobile {
-    margin: 0 auto;
     width: 280px;
-    height: 256px;
   }
 
   @include tablet {
-    margin: 0 auto;
-    width: 500px;
-    height: 512px;
-    grid-column: 1/-1;
-    margin-top: 68px;
-  }
-
-  @include desktop {
-    margin-top: 0;
-    grid-column: 2/-1;
-    grid-row: 1/5;
+    width: 560px;
   }
 }
