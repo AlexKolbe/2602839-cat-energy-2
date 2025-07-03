@@ -1,30 +1,50 @@
 //  SLIDER - Слайдер с котиками
 .slider {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.slider__image-before {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.slider__image-after {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-
-.slider__image {
-  display: block;
+  position: relative;
   width: 100%;
-  object-fit: cover;
 
-  &--before {
-    object-position: left;
+  @include mobile {
+    height: 256px;
   }
 
-  &--after {
-    object-position: right;
+  @include tablet {
+    height: 512px;
+  }
+}
+
+.slider .slider__image {
+  width: 100%;
+  display: block;
+}
+
+.slider__image--before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include mobile {
+    clip: rect(0, 140px, 256px, 0);
+  }
+
+  @include tablet {
+    clip: rect(0, 280px, 512px, 0);
+  }
+}
+
+.slider__image--after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include mobile {
+    clip: rect(0, 280px, 256px, 140px);
+  }
+
+  @include tablet {
+    clip: rect(0, 560px, 512px, 280px);
   }
 }
 
@@ -36,47 +56,37 @@
   height: 100%;
   padding: 0;
   color: #666666;
-  background-color: currentColor;
-  border-radius: 2px;
+  background-color: #666666;
   border: none;
   transform: translateX(-50%);
-  transition: 0.3s;
+}
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    border: 2px solid currentColor;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    content: "";
-  }
+.slider__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+}
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    mask-image: url("../../icons/stack.svg#slider-icon");
-    mask-size: 24px 18px;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: currentColor;
-    transform: translateX(-50%) translateY(-50%);
-    cursor: grab;
-    content: "";
-  }
-
-  &:hover,
-  &:focus {
-    color: $element-background-color;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+.slider__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  mask-image: url("../../icons/stack.svg#thumb-icon");
+  mask-size: 24px 18px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: #666666;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 4;
 }

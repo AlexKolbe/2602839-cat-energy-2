@@ -173,10 +173,6 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 11px;
-    // display: flex;
-    // text-align: right;
-    // flex-direction: column;
-    // gap: 9px;
   }
 
   @include desktop {
@@ -190,6 +186,7 @@
 .live-example__slider {
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 
   @include mobile {
     width: 280px;
@@ -197,5 +194,6 @@
 
   @include tablet {
     width: 560px;
+    grid-column: 1/-1;
   }
 }
