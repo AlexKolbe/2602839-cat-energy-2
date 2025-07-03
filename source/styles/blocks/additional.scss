@@ -9,7 +9,7 @@
 
   @include mobile {
     margin-top: 17px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   @include tablet {
@@ -29,7 +29,6 @@
 
 .additional__title {
   @include font-info($primary-font, 24px, 37px);
-  text-transform: uppercase;
   display: block;
   background-color: $bg-color-primary;
   margin: 0;
@@ -60,7 +59,12 @@
     position: absolute;
     background-color: $bg-color-accent;
     z-index: -1;
-    top: 22px;
+    top: 16px;
+
+    @include mobile {
+
+      transform: translateX(-50%);
+    }
 
     @include tablet {
       width: 100vw;
@@ -91,9 +95,9 @@
   display: grid;
 
   @include mobile {
-    padding-top: 14px;
+    padding-top: 13px;
     padding-bottom: 19px;
-    row-gap: 13px;
+    row-gap: 9px;
     border-top: 1px solid $input-color-border;
   }
 
@@ -140,9 +144,10 @@
 .additional__characteristics {
   @include font-info($second-font, 14px, 20px);
   color: $font-color-accent;
-  display: grid;
-  margin: 0;
-  column-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 3px;
+  column-gap: 5px;
 
   @include mobile {
     grid-template-columns: auto min-content;
@@ -161,6 +166,11 @@
     margin-right: -70px;
     margin-top: 6px;
   }
+}
+
+.additional__characteristic-name,
+.additional__characteristic-value {
+  margin: 0;
 }
 
 .additional__button {
@@ -218,7 +228,7 @@
 .additional__gift-description {
   @include font-info($second-font, 16px, 20px);
   position: relative;
-  padding: 187px 59px 0;
+  padding: 185px 60px 0;
   margin: 0 auto;
   text-align: center;
   color: $font-color-second;
@@ -227,11 +237,11 @@
     content: "";
     display: block;
     position: absolute;
-    width: 78px;
+    width: 76px;
     height: 81px;
     background-image: url("../../icons/stack.svg#gift-icon");
     background-repeat: no-repeat;
-    top: 60px;
+    top: 56px;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 40px;
