@@ -3,7 +3,7 @@
 .footer__wrapper {
   @include mobile {
     display: flex;
-    padding-top: 40px;
+    padding-top: 38px;
     padding-bottom: 40px;
     flex-direction: column;
   }
@@ -26,6 +26,10 @@
     align-self: center;
     padding-bottom: 17px;
   }
+}
+
+.footer__logo > .logo__title {
+  margin: 0;
 }
 
 .footer__social {

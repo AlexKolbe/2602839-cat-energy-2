@@ -109,13 +109,13 @@
       width: 200px;
       height: 200px;
       right: 63px;
-      top: 98px;
+      top: 92px;
     }
 
     &--strong::after {
       content: "";
       position: absolute;
-      top: 141px;
+      top: 137px;
       right: 29px;
       height: 112px;
       width: 268px;
@@ -126,11 +126,56 @@
   }
 
   @include desktop {
-    display: grid;
-    grid-template-columns: 100px auto;
-    column-gap: 62px;
-    grid-template-rows: min-content auto auto;
-    padding: 47px 61px 59px 52px;
+    display: flex;
+    padding: 77px 67px 59px 52px;
+    flex-direction: column;
+
+
+    &--fit::before {
+      content: "";
+      background-color: $bg-color-accent;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 47px;
+      left: 52px;
+    }
+
+    &--fit::after {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../../icons/stack.svg#lean-cat-icon");
+    }
+
+    &--strong::before {
+      content: "";
+      background-color: $bg-color-accent;
+      border-radius: 50%;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &--strong::after {
+      content: "";
+      position: absolute;
+      top: 67px;
+      left: 33px;
+      height: 56px;
+      width: 134px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../../icons/stack.svg#strong-cat-icon");
+    }
   }
 }
 
@@ -150,7 +195,8 @@
   }
 
   @include desktop {
-    align-self: center;
+    align-self: self-start;
+    padding-left: 162px;
   }
 }
 
@@ -186,20 +232,18 @@
   }
 
   @include desktop {
-    margin-top: 39px;
-    margin-bottom: 27px;
+    margin-top: 73px;
+    margin-bottom: 31px;
     margin-right: 0;
-    grid-column: 1/-1;
   }
 }
 
 .advantages__button {
-  // grid-column: 1/-1;
   width: fit-content;
   position: relative;
 
   @include desktop {
-    align-self: end;
+    align-self: self-start;
   }
 
   &::after {
@@ -221,6 +265,10 @@
 
     @include tablet {
       margin-left: 25px;
+    }
+
+    @include desktop {
+      top: 5px;
     }
   }
 

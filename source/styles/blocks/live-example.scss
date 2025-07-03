@@ -33,9 +33,9 @@
 
   @include desktop {
     grid-template-columns: auto 560px;
-    column-gap: 224px;
+    gap: 0;
     padding-top: 20px;
-    padding-bottom: 75px;
+    padding-bottom: 70px;
   }
 }
 
@@ -53,7 +53,8 @@
 
   @include desktop {
     grid-column: 1/2;
-    margin-bottom: 126px;
+    margin-top: 1px;
+    margin-bottom: 113px;
   }
 }
 
@@ -71,12 +72,14 @@
     margin-bottom: 35px;
     font-size: 16px;
     line-height: 24px;
+    padding-right: 11px;
+    text-align: start;
   }
 
   @include desktop {
     grid-column: 1/2;
-    margin-bottom: 49px;
-    max-width: 432px;
+    margin-bottom: 0;
+    max-width: 444px;
   }
 }
 
@@ -98,7 +101,8 @@
   @include desktop {
     grid-template-columns: repeat(auto-fill, 162px);
     gap: 42px;
-    margin-bottom: 13px;
+    margin-bottom: 55px;
+    grid-column: 1/2;
   }
 }
 
@@ -171,15 +175,20 @@
 
   @include tablet {
     font-size: 20px;
-    line-height: 20px;
-    margin-top: 11px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding-left: 62px;
+    padding-right: 30px;
+    text-align: end;
   }
 
   @include desktop {
-    text-align: left;
+    grid-column: 1/2;
     display: flex;
-    flex-direction: row;
+    padding-left: 0;
+    justify-content: flex-start;
     gap: 66px;
+    margin-top: -13px;
   }
 }
 
@@ -195,5 +204,14 @@
   @include tablet {
     width: 560px;
     grid-column: 1/-1;
+    padding-top: 69px;
+  }
+
+  @include desktop {
+    width: 560px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    padding-top: 3px;
+    margin-left: 15px;
   }
 }

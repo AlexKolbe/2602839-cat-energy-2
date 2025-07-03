@@ -9,6 +9,7 @@
 
   @include tablet {
     height: 512px;
+    right: 15px;
   }
 }
 
@@ -58,6 +59,7 @@
   color: #666666;
   background-color: #666666;
   border: none;
+  border-radius: 2px;
   transform: translateX(-50%);
 }
 

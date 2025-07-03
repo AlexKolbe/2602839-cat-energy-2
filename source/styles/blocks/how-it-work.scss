@@ -93,6 +93,10 @@
       width: 80px;
       margin-bottom: 31px;
     }
+
+    @include desktop {
+      margin-bottom: 33px;
+    }
   }
 
   &::after {
@@ -134,18 +138,20 @@
   background-size: 27px 31px;
 }
 
-// .how-it-work__item::before {
-//   content: "";
-//   display: block;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-color: $bg-color-accent;
-//   aspect-ratio: 1;
-//   width: 60px;
-// }
 
 .how-it-work__description {
   align-self: center;
   margin: 0;
-  padding: 0;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  @include tablet {
+    padding-right: 80px;
+  }
+
+  @include desktop {
+    padding-right: 20px;
+  }
 }
