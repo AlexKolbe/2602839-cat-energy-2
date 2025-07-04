@@ -239,45 +239,33 @@
 }
 
 .advantages__button {
-  width: fit-content;
-  position: relative;
-
-  @include desktop {
-    align-self: self-start;
-  }
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0 60px 0 0;
+  box-sizing: border-box;
 
   &::after {
     content: "";
-    position: absolute;
-    box-sizing: border-box;
     width: 24px;
     height: 12px;
     background-image: url("../../icons/stack.svg#arrow-icon");
-    background-size: 22px 12px;
+    background-size: 32px 12px;
     background-repeat: no-repeat;
     background-position: right;
-    transition: 0.2s ease-in-out;
-    top: 2px;
-
-    @include mobile {
-      margin-left: 16px;
-    }
-
-    @include tablet {
-      margin-left: 25px;
-    }
-
-    @include desktop {
-      top: 5px;
-    }
+    transition: 0.2s;
   }
 
   &:hover::after {
     width: 32px;
   }
 
-  &:active::after {
+  &:active {
     opacity: 0.3;
-    transition: 0.5s;
+
+
+    ::after {
+      width: 32px;
+    }
   }
 }

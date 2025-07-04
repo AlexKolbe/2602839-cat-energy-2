@@ -21,14 +21,18 @@
     &::before {
       position: absolute;
       content: "";
-      top: 0;
+      top: -224px;
       left: 50%;
       display: block;
       min-width: 50%;
       min-height: 694px;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
-        image-set(url("../../hero-decoration-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/hero-decoration-desktop@2x.jpg") type("image/jpeg") 2x),
+        image-set(
+          url("../../images/hero-decoration-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/hero-decoration-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/hero-decoration-desktop@1x.jpg") type("image/jpeg") 1x,
+          url("../../images/hero-decoration-desktop@2x.jpg") type("image/jpeg") 2x),
         linear-gradient(to bottom, #313134 50%, #343438 100%);
       background-position: left top;
       background-repeat: no-repeat;
@@ -47,7 +51,11 @@
 
     background-image:
       linear-gradient($bg-color-picture 62%, $bg-color-primary 39%),
-      image-set("../../images/hero-decoration-mobile@1x.jpg" 1x type("image/jpg"), "../../images/hero-decoration-mobile@2x.jpg" 2x type("image/jpg")),
+      image-set(
+        url("../../images/hero-decoration-mobile@1x.webp") 1x type("image/webp"),
+        url("../../images/hero-decoration-mobile@2x.webp") 2x type("image/webp"),
+        url("../../images/hero-decoration-mobile@1x.jpg") 1x type("image/jpg"),
+        url("../../images/hero-decoration-mobile@2x.jpg") 2x type("image/jpg")),
       linear-gradient(to right, $bg-color-picture-alternate);
     z-index: -1;
 
@@ -141,7 +149,7 @@
   @include desktop {
     position: absolute;
     margin: 0;
-    top: -80px;
+    top: -83px;
     left: 50%;
     transform: translateX(-30%) translateY(2px);
   }
@@ -172,6 +180,6 @@
     position: absolute;
     left: 80px;
     width: 244px;
-    top: 232px;
+    top: 233px;
   }
 }
