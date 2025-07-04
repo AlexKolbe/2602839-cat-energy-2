@@ -116,7 +116,7 @@
 @include mobile {
   .main-nav--no-js {
     .main-nav__toggle {
-      visibility: hidden;
+      display: none;
     }
 
     .main-nav__wrapper {

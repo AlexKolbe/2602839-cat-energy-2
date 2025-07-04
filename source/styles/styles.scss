@@ -6,7 +6,7 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/page";
+@import "./blocks/page.scss";
 @import "./blocks/button.scss";
 @import "./blocks/header";
 @import "./blocks/logo";
@@ -24,4 +24,6 @@
 @import "./blocks/contacts";
 @import "./blocks/footer";
 @import "./blocks/social";
-@import "./blocks/slider"
+@import "./blocks/slider";
+@import "./blocks/main-container.scss";
+@import "./blocks/section-title.scss";
