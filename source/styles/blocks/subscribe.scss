@@ -14,42 +14,20 @@
     font-size: 40px;
     line-height: 40px;
   }
-
-  &::after {
-    content: "";
-    height: 2px;
-    background-color: $bg-color-primary;
-    display: block;
-    width: 34px;
-    max-width: 100%;
-    flex-grow: 1;
-    margin: auto -20px auto 40px;
-
-    @include mobile {
-
-      transform: translateX(-50%);
-    }
-
-    @include tablet {
-      margin: auto -34px auto 40px;
-      flex-grow: 1;
-    }
-
-    @include desktop {
-      position: absolute;
-      width: 100%;
-      margin: 0;
-      top: 89px;
-      right: 0;
-      left: 0;
-    }
-  }
 }
 
 .subscribe__text {
-  @include font-info($primary-font, 16px, 24px);
   text-align: center;
   margin: 0 0 25px;
+
+  @include mobile {
+    @include font-info($primary-font, 16px, 24px);
+  }
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .subscribe__form {

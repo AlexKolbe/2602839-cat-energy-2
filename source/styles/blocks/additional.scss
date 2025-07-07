@@ -209,7 +209,7 @@
       linear-gradient($bg-color-picture),
       image-set(
         url("../../images/catalog-bg-gift-tablet@1x.webp") 1x type("image/webp"),
-        url("../../images/catalog-bg-gift-tablet@2x.webp") 2x type("image/webp")
+        url("../../images/catalog-bg-gift-tablet@2x.webp") 2x type("image/webp"),
         url("../../images/catalog-bg-gift-tablet@1x.jpg") 1x type("image/jpeg"),
         url("../../images/catalog-bg-gift-tablet@2x.jpg") 2x type("image/jpeg")),
       linear-gradient(to right, $bg-color-picture-alternate);
