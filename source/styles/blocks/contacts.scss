@@ -94,3 +94,14 @@
   inset: 0;
   z-index: 1;
 }
+
+.contacts__map iframe {
+  width: 100%;
+  display: block;
+  border: none;
+
+  @include tablet {
+    min-height: 400px;
+    height: 100%;
+  }
+}

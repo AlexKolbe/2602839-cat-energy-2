@@ -19,7 +19,7 @@
 
   @include desktop {
     margin-top: 73px;
-    margin-bottom: 22px;
+    margin-bottom: 96px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
@@ -88,6 +88,7 @@
 
   @include desktop {
     grid-column: 1/4;
+    margin-bottom: 0;
   }
 }
 
@@ -192,8 +193,8 @@
       image-set(
         url("../../images/catalog-bg-gift-mobile@1x.webp") 1x type("image/webp"),
         url("../../images/catalog-bg-gift-mobile@2x.webp") 2x type("image/webp"),
-        url("../../images/catalog-bg-gift-mobile@1x.jpg") 1x type("image/jpg"),
-        url("../../images/catalog-bg-gift-mobile@2x.jpg") 2x type("image/jpg")),
+        url("../../images/catalog-bg-gift-mobile@1x.jpg") 1x type("image/jpeg"),
+        url("../../images/catalog-bg-gift-mobile@2x.jpg") 2x type("image/jpeg")),
       linear-gradient(to right, $bg-color-picture-alternate);
     background-position: center;
     background-repeat: no-repeat;
@@ -209,8 +210,8 @@
       image-set(
         url("../../images/catalog-bg-gift-tablet@1x.webp") 1x type("image/webp"),
         url("../../images/catalog-bg-gift-tablet@2x.webp") 2x type("image/webp")
-        url("../../images/catalog-bg-gift-tablet@1x.jpg") 1x type("image/jpg"),
-        url("../../images/catalog-bg-gift-tablet@2x.jpg") 2x type("image/jpg")),
+        url("../../images/catalog-bg-gift-tablet@1x.jpg") 1x type("image/jpeg"),
+        url("../../images/catalog-bg-gift-tablet@2x.jpg") 2x type("image/jpeg")),
       linear-gradient(to right, $bg-color-picture-alternate);
     background-position: center;
     background-repeat: no-repeat;
@@ -219,19 +220,19 @@
   }
 
   @include desktop {
-    margin-top: 20px;
-    min-height: 200px;
+    margin-top: 0;
+    min-height: 288px;
     background-image:
       linear-gradient($bg-color-picture),
       image-set(
         url("../../images/catalog-bg-gift-desktop@1x.webp") 1x type("image/webp"),
         url("../../images/catalog-bg-gift-desktop@2x.webp") 2x type("image/webp"),
-        url("../../images/catalog-bg-gift-desktop@1x.jpg") 1x type("image/jpg"),
-        url("../../images/catalog-bg-gift-desktop@2x.jpg") 2x type("image/jpg")),
+        url("../../images/catalog-bg-gift-desktop@1x.jpg") 1x type("image/jpeg"),
+        url("../../images/catalog-bg-gift-desktop@2x.jpg") 2x type("image/jpeg")),
       linear-gradient(to right, $bg-color-picture-alternate);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto, 707px, auto;
+    background-size: auto, 245px, auto;
     position: relative;
   }
 }

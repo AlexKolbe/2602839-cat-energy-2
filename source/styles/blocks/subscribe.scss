@@ -2,21 +2,28 @@
 
 .subscribe {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .subscribe__title {
-  @include font-info($primary-font, 24px, 37px);
+  @include font-info($primary-font, 24px, 24px);
   margin: 0 0 25px;
   position: relative;
 
+  @include tablet {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
   &::after {
     content: "";
-    position: absolute;
     height: 2px;
-    width: 100%;
-    background-color: $bg-color-accent;
-    z-index: -1;
-    top: 16px;
+    background-color: $bg-color-primary;
+    display: block;
+    width: 34px;
+    max-width: 100%;
+    flex-grow: 1;
+    margin: auto -20px auto 40px;
 
     @include mobile {
 
@@ -24,9 +31,17 @@
     }
 
     @include tablet {
-      width: 100vw;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: auto -34px auto 40px;
+      flex-grow: 1;
+    }
+
+    @include desktop {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      top: 89px;
+      right: 0;
+      left: 0;
     }
   }
 }
