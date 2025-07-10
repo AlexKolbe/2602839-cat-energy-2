@@ -86,6 +86,7 @@
 .live-example__statistics {
   display: grid;
   margin: 0;
+  align-items: start;
 
   @include mobile {
     grid-template-columns: 1fr 1fr;
