@@ -1,6 +1,6 @@
 //  Карточка товара в каталоге
 
-.card {
+.catalog__item {
   position: relative;
 
   @include mobile {
@@ -17,8 +17,8 @@
     flex-direction: column;
     min-height: 430px;
     padding: 37px 37px 40px;
-    background-color: $bg-color-second;
-    margin-top: 81px;
+    background-image: linear-gradient($bg-color-primary 16%, $bg-color-second 16%);
+    // margin-top: 81px;
   }
 
   @include desktop {
@@ -39,7 +39,7 @@
   }
 }
 
-.card__title {
+.catalog__item-title {
   @include font-info($primary-font, 16px, 20px);
   text-transform: uppercase;
   color: $font-color-primary-alternate-accent;
@@ -57,7 +57,7 @@
   }
 }
 
-.card__characteristics-wrapper {
+.catalog__item-characteristics-wrapper {
   @include font-info($second-font, 12px, 16px);
   color: $font-color-accent;
   display: flex;
@@ -77,7 +77,7 @@
   }
 }
 
-.card__characteristic {
+.catalog__item-characteristic {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -97,24 +97,24 @@
   }
 }
 
-.card__characteristic-name,
-.card__characteristic-value {
+.catalog__item-characteristic-name,
+.catalog__item-characteristic-value {
   @include mobile {
     @include font-info($second-font, 12px, 16px);
   }
 }
 
-.card__description {
+.catalog__item-description {
   @include font-info($second-font, 12px, 16px);
 }
 
-.card__link {
+.catalog__item-link {
   text-decoration: none;
   color: $font-color-primary-alternate-accent;
   display: block;
 }
 
-.card__image {
+.catalog__item-image {
   display: block;
   margin: 0 auto;
   min-height: 100%;
@@ -161,7 +161,7 @@
   }
 }
 
-.card__button {
+.catalog__item-button {
   @include mobile {
     grid-column: 1/-1;
   }
