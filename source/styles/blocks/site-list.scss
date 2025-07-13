@@ -97,7 +97,7 @@
   }
 }
 
-.site-list__item--active-alternate.site-list__link::before {
+.site-list__link--active-alternate.site-list__link::before {
   @include desktop {
     content: "";
     position: absolute;
