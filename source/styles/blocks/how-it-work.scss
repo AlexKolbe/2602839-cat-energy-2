@@ -31,7 +31,7 @@
 
 .how-it-work__title {
   @include mobile {
-    margin: 20px auto 40px;
+    margin: 20px auto 41px;
   }
 
   @include tablet {
@@ -48,12 +48,13 @@
   @include tablet {
     grid-template-columns: 1fr 1fr;
     gap: 37px 60px;
-    margin-top: 32px;
+    margin-top: 35px;
   }
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    margin-top: 32px;
   }
 }
 
@@ -152,6 +153,6 @@
   }
 
   @include desktop {
-    padding-right: 20px;
+    padding-right: 0;
   }
 }

@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+
+  @include tablet {
+    margin-top: 3px;
+  }
 }
 
 .social__link {
@@ -19,7 +23,7 @@
     content: "";
     width: 28px;
     display: block;
-    height: 22px;
+    height: 20px;
   }
 
   &:hover {

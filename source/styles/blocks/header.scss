@@ -3,10 +3,6 @@
 .header {
   background-color: $bg-color-primary;
 
-  @include mobile {
-    // min-height: 65px;
-  }
-
   @include tablet {
     background-color: $bg-color-transparent;
     display: flex;
@@ -16,10 +12,9 @@
   }
 
   @include desktop {
-    // margin: 0 auto;
-    max-width: 1440px;
+    margin: 0 auto;
+    min-width: 1220px;
     padding-top: 55px;
-    margin: 0 109px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -47,10 +42,6 @@
     padding: 0;
   }
 }
-
-// .header__container--accent {
-//   border-bottom: 1px solid $border-color-primary;
-// }
 
 .header__logo {
   display: flex;

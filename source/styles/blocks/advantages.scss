@@ -127,7 +127,7 @@
 
   @include desktop {
     display: flex;
-    padding: 77px 67px 59px 52px;
+    padding: 77px 65px 59px 52px;
     flex-direction: column;
 
 
@@ -208,7 +208,7 @@
   margin: 0;
 
   @include mobile {
-    margin-top: 11px;
+    margin-top: 10px;
     margin-bottom: 23px;
 
     &::after {
@@ -241,9 +241,16 @@
 .advantages__button {
   display: flex;
   align-items: center;
-  gap: 25px;
   padding: 0 60px 0 0;
   box-sizing: border-box;
+
+  @include mobile {
+    gap: 17px;
+  }
+
+  @include tablet {
+    gap: 26px;
+  }
 
   &::after {
     content: "";

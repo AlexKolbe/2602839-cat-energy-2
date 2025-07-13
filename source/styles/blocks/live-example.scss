@@ -8,12 +8,12 @@
 
   @include tablet {
     background-color: $bg-color-primary;
-    background-image: linear-gradient($bg-color-transparent 0 619px, $bg-color-accent-alternate 619px 100%);
+    background-image: linear-gradient($bg-color-transparent 0 57%, $bg-color-accent-alternate 57% 100%);
   }
 
   @include desktop {
     background-color: $bg-color-primary;
-    background-image: linear-gradient($bg-color-transparent 0 156px, $bg-color-accent-alternate 156px 100%);
+    background-image: linear-gradient($bg-color-transparent 0 25%, $bg-color-accent-alternate 25% 100%);
   }
 }
 
@@ -54,7 +54,7 @@
   @include desktop {
     grid-column: 1/2;
     margin-top: 1px;
-    margin-bottom: 113px;
+    margin-bottom: 81px;
   }
 }
 
@@ -102,7 +102,7 @@
   @include desktop {
     grid-template-columns: repeat(auto-fill, 162px);
     gap: 42px;
-    margin-bottom: 55px;
+    margin-bottom: -10px;
     grid-column: 1/2;
   }
 }
@@ -177,9 +177,9 @@
   @include tablet {
     font-size: 20px;
     line-height: 28px;
-    margin-top: 10px;
+    margin-top: 8px;
     padding-left: 62px;
-    padding-right: 30px;
+    padding-right: 31px;
     text-align: end;
   }
 

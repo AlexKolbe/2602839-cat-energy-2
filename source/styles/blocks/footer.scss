@@ -24,7 +24,7 @@
 .footer__logo {
   @include mobile {
     align-self: center;
-    padding-bottom: 17px;
+    padding-bottom: 19px;
   }
 }
 
@@ -34,7 +34,7 @@
 
 .footer__social {
   @include mobile {
-    padding-top: 20px;
+    padding-top: 22px;
     padding-bottom: 17px;
     border-top: 1px solid $border-color-second;
     border-bottom: 1px solid $border-color-second;

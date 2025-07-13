@@ -15,10 +15,10 @@
   @include tablet {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     min-height: 430px;
     padding: 37px 37px 40px;
-    background-image: linear-gradient($bg-color-primary 16%, $bg-color-second 16%);
-    // margin-top: 81px;
+    background-image: linear-gradient($bg-color-primary 18%, $bg-color-second 18%);
   }
 
   @include desktop {
@@ -83,7 +83,7 @@
   gap: 20px;
 
   @include tablet {
-    padding: 7px 0 3px;
+    padding: 5px 0;
     border-bottom: 1px solid $input-color-border-hover;
   }
 
@@ -129,22 +129,23 @@
 
   &--small {
     @include mobile {
-      margin-bottom: 8px;
+      margin-top: 11px;
       align-self: center;
-      height: 100px;
+      height: 83px;
     }
 
     @include tablet {
       margin-top: 5px;
       margin-bottom: 40px;
-      height: 172px;
+      height: 127px;
+      justify-self: self-start;
     }
   }
 
   &--large {
     @include mobile {
       align-self: flex-start;
-      height: 107px;
+      height: 103px;
       margin-bottom: 10px;
     }
 
@@ -164,9 +165,10 @@
 .catalog__item-button {
   @include mobile {
     grid-column: 1/-1;
+    font-size: 16px;
   }
 
   @include tablet {
-    margin-top: auto;
+    // margin-top: auto;
   }
 }
