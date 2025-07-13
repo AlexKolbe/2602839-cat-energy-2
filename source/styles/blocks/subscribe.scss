@@ -4,6 +4,10 @@
   margin-bottom: 40px;
   position: relative;
   overflow-x: hidden;
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
 }
 
 .subscribe__title {
@@ -28,6 +32,7 @@
   @include desktop {
     margin-left: -40px;
     font-size: 40px;
+    margin-bottom: 70px;
   }
 
   &::after {
@@ -71,7 +76,7 @@
 
 .subscribe-input {
   @include font-info($primary-font, 20px, 24px);
-  // text-transform: uppercase;
+  text-transform: uppercase;
   color: $font-color-accent;
   height: 56px;
   margin-bottom: 15px;
@@ -99,5 +104,9 @@
   @include tablet {
     width: 256px;
     height: 56px;
+  }
+
+  @include desktop {
+    font-size: 20px;
   }
 }

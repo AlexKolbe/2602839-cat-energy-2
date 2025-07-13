@@ -41,11 +41,6 @@
   }
 }
 
-.site-list__item--active-alternate .site-list__link::before {
-  @include desktop {
-    background-color: $bg-color-primary;
-  }
-}
 
 .site-list__link {
   text-decoration: none;
@@ -62,6 +57,11 @@
   &:active {
     color: rgba($font-color-primary, 0.3);
   }
+
+  &:disabled {
+    color: rgba($font-color-primary, 0.1);
+  }
+
 
   @include mobile {
     display: block;
@@ -94,5 +94,17 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+
+.site-list__item--active-alternate.site-list__link::before {
+  @include desktop {
+    content: "";
+    position: absolute;
+    background-color: $bg-color-primary;
+    height: 2px;
+    bottom: 3px;
+    left: 0;
+    right: 0;
   }
 }

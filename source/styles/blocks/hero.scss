@@ -26,6 +26,7 @@
       display: block;
       min-width: 50%;
       min-height: 694px;
+      background-color: $bg-color-picture-alternate;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
         image-set(
@@ -157,6 +158,18 @@
 
 .hero__button {
   @include font-info($primary-font, 16px, 20px);
+
+  &:hover {
+    background-color: $button-bg-color-first;
+  }
+
+  &:active {
+    background-color: $button-bg-color-second;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 
   @include mobile {
     order: 3;

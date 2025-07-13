@@ -276,4 +276,8 @@
       width: 32px;
     }
   }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 }

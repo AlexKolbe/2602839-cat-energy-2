@@ -38,6 +38,13 @@
     }
   }
 
+  &:disabled {
+    &::before {
+      background-color: rgba($bg-color-accent, 0.6);
+      opacity: 0.1;
+    }
+  }
+
 
   &--vkontakte::before {
     mask-image: url("../../icons/stack.svg#vkontakte-icon");

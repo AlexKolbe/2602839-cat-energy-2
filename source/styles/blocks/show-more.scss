@@ -21,6 +21,10 @@
     padding: 50px 37px 40px;
   }
 
+  @include desktop {
+    margin-top: 97px;
+  }
+
   text-transform: uppercase;
   position: relative;
   padding: 0;
@@ -40,7 +44,8 @@
     }
 
     @include tablet {
-      top: 140px;
+      top: 79px;
+      width: 60px;
     }
   }
 
@@ -59,7 +64,8 @@
     }
 
     @include tablet {
-      top: 140px;
+      height: 60px;
+      top: 79px;
     }
   }
 
@@ -75,6 +81,12 @@
 .catalog__item-show-more-title {
   padding: 0;
   margin: 16px 0 0;
+
+  @include desktop {
+    margin: 0 10px 26px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog__item-show-more-description {
@@ -83,6 +95,12 @@
   padding: 0;
   margin: 0 0 20px;
   text-transform: none;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 100px;
+  }
 }
 
 .catalog__item-show-more .catalog__item-button {
