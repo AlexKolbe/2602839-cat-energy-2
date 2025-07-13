@@ -5,6 +5,10 @@
   position: relative;
   overflow-x: hidden;
 
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
   @include desktop {
     margin-bottom: 90px;
   }
@@ -26,7 +30,7 @@
     font-size: 32px;
     line-height: 40px;
     padding: 0 40px;
-    margin-bottom: 66px;
+    margin-bottom: 62px;
   }
 
   @include desktop {
@@ -63,6 +67,7 @@
   @include tablet {
     font-size: 24px;
     line-height: 32px;
+    margin: 0 45px 25px;
   }
 }
 
@@ -104,9 +109,6 @@
   @include tablet {
     width: 256px;
     height: 56px;
-  }
-
-  @include desktop {
     font-size: 20px;
   }
 }

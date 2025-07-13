@@ -25,11 +25,11 @@
   @include tablet {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
 
   @include desktop {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
@@ -39,7 +39,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-    gap: 47px 60px;
+    gap: 46px 60px;
   }
 
   @include desktop {

@@ -54,11 +54,11 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    margin: 0 20px 14px;
+    margin: 7px 40px 15px;
   }
 
   @include desktop {
-    margin: 14px 20px;
+    margin: 0 20px 14px;
   }
 }
 
@@ -124,7 +124,6 @@
   margin: 0 auto;
   min-height: 100%;
   max-width: 100%;
-  // width: auto;
 
   @include mobile {
     grid-row: 1 / span 2;
@@ -140,15 +139,15 @@
     }
 
     @include tablet {
-      margin-top: 5px;
       margin-bottom: 40px;
-      height: 127px;
-      justify-self: self-start;
+      height: 171px;
+      padding-bottom: 35px;
     }
 
     @include desktop {
-      margin-top: -20px;
-      height: 150px;
+      margin-bottom: 40px;
+      padding-top: 6px;
+      padding-bottom: 35px;
     }
   }
 
@@ -167,18 +166,13 @@
     }
 
     @include desktop {
-      margin-top: -6px;
+      margin-top: -18px;
       height: 196px;
-      margin-bottom: 6px;
+      margin-bottom: 18px;
     }
   }
 }
 
-// .catalog-item .catalog__item-image--small {
-//   @include desktop {
-//     padding-top: 40px;
-//   }
-// }
 
 .catalog__item-button {
   @include mobile {
@@ -186,7 +180,4 @@
     font-size: 16px;
   }
 
-  @include tablet {
-    // margin-top: auto;
-  }
 }

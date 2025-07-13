@@ -101,7 +101,7 @@
   }
 
   @include tablet {
-    padding: 24px 37px 29px;
+    padding: 24px 37px 26px;
     border: 1px solid $input-color-border;
     border-bottom: 0;
     grid-template-columns: 1fr 1fr;
@@ -110,11 +110,11 @@
 
   @include desktop {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 80px;
+    gap: 20px 83px;
     align-items: center;
     border: 0;
     border-top: 1px solid $input-color-border;
-    padding: 15px 0;
+    padding: 0;
   }
 
   &:last-child {
@@ -144,40 +144,40 @@
   @include font-info($second-font, 14px, 20px);
   color: $font-color-accent;
   display: grid;
-  // justify-content: space-between;
   margin: 0 0 3px;
   column-gap: 5px;
 
   @include mobile {
-    grid-template-columns: auto min-content;
+    grid-template-columns: auto 37px;
   }
 
   @include tablet {
     font-size: 16px;
     line-height: 20px;
-    text-align: left;
-    grid-template-columns: auto 84px;
+    text-align: right;
+    grid-template-columns: auto 88px;
     margin-top: 4px;
   }
 
   @include desktop {
     grid-template-columns: auto 100px;
-    margin-right: -70px;
+    margin-right: -100px;
     margin-top: 6px;
+    text-align: left;
   }
 }
 
-.additional__characteristic-name {
+.additional__characteristic-name,
+.additional__characteristic-value {
   margin: 0;
 }
 
 .additional__characteristic-value {
-  @include desktop {
-    margin-left: 30px;
-    text-align: left;
-    align-items: start;
+  @include mobile {
+    text-align: right;
   }
 }
+
 
 .additional__button {
   @include tablet {
@@ -214,7 +214,7 @@
 
   @include tablet {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
     min-height: 200px;
     background-image:
@@ -264,10 +264,9 @@
     }
 
     @include tablet {
-      width: 76px;
-      height: 81px;
-      margin: 0 auto;
-      align-self: center;
+      width: 82px;
+      height: 83px;
+      margin: 56px 78px;
     }
   }
 }
@@ -284,7 +283,14 @@
     padding: 0 25px 45px;
   }
 
+  @include tablet {
+    margin: 71px 127px 0;
+    text-align: left;
+  }
+
   @include desktop {
-    padding: 50px 30px 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 30px;
   }
 }
