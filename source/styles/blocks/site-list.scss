@@ -88,9 +88,11 @@
 }
 
 .site-list__link--alternate {
-  color: $font-color-second;
+  color: $font-color-primary;
 
   @include desktop {
+    color: $font-color-second;
+
     &:hover {
       color: rgba($font-color-second, 0.6);
     }
